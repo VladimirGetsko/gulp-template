@@ -1,0 +1,14 @@
+extends layout/app
+
+block page
+    include chunk/header
+
+    h1.title Главная.
+
+    img(src="img/max.jpg", alt="Photo Max", width="500")
+
+    ul.news
+        each item in news
+            li= item.name
+
+    include chunk/footer

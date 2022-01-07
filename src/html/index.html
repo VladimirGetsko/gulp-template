@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Главная</title>
+</head>
+<body>
+
+    @@include('chunk/header.html')
+
+    <h1>Главная.</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odit exercitationem a doloremque aliquam nam ut incidunt tempore minus dolorem delectus ducimus consequatur itaque, id animi esse, accusamus tenetur, quo laborum tempora modi natus beatae possimus adipisci. Voluptatem magnam labore eaque, voluptatum, quaerat aperiam modi tenetur nobis sunt laudantium quo?</p>
+
+    @@loop("chunk/news-item.html", "../../data/news.json")
+
+    @@include('chunk/footer.html')
+
+    <script src="js/main.js"></script>
+</body>
+</html>
