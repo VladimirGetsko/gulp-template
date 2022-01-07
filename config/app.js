@@ -16,5 +16,5 @@ module.exports = {
 
     imagemin: {
         verbose: true
-    }
+    },
 };

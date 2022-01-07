@@ -41,6 +41,9 @@
     "gulp-sass-glob": "^1.1.0",
     "gulp-shorthand": "^1.1.0",
     "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "gulp-webp-css": "^1.1.0",
+    "gulp-webp-html": "^1.0.2",
     "sass": "^1.45.2",
     "webpack": "^5.65.0",
     "webpack-stream": "^7.0.0"
