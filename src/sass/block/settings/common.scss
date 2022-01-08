@@ -1,0 +1,50 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: $main-font;
+	font-size: $base-size;
+	color: $white-color;
+	background-color: $grey-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.container{
+	padding: 0 15px;
+	max-width: $maxWidthContainer;
+	width: 100%;
+	margin: 0 auto;
+
+	// @include min768{
+	// 	margin: 0 auto;
+	// 	max-width: 717px;
+	// }
+}

@@ -1,4 +1,8 @@
-$base-font-size: 16px;
+@import 'block/settings/variables.scss';
+@import 'block/settings/mixins.scss';
+@import 'block/settings/common.scss';
+@import 'block/settings/fonts.scss';
+
 
 @mixin ph {
     @media (max-width: 700px) {
@@ -8,19 +12,16 @@ $base-font-size: 16px;
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-size: $base-font-size;
-    font-family: Arial;
-    line-height: 1.5;
-    background-image: url(../img/backgrounds-16.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 
-    @include ph {
-        color: #fff;
-        background-color: #000;
+    @include min768 {
+        background-image: url(../img/backgrounds-16.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
