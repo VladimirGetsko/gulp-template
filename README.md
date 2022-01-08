@@ -1,5 +1,4 @@
 # gulp-codequest
 
-npm run start
-
-npm run build
+Launch of the project - <b>npm run start</b>
+Building the project - <b>npm run build</b>
