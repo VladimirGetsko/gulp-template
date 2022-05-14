@@ -17,19 +17,8 @@ body {
 	background-color: $grey-color;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	margin: 0;
-}
-
 ul, li {
-	margin: 0;
-	padding: 0;
 	list-style: none;
-}
-
-p {
-	padding: 0;
-	margin: 0;
 }
 
 a {
@@ -37,14 +26,48 @@ a {
 	color: inherit;
 }
 
-.container{
-	padding: 0 15px;
-	max-width: $maxWidthContainer;
-	width: 100%;
-	margin: 0 auto;
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 
-	// @include min768{
-	// 	margin: 0 auto;
-	// 	max-width: 717px;
-	// }
+.page {
+    flex: 1 1 auto;
+}
+
+[class*="__container"] {
+    max-width: $maxWidthContainer;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+.button {
+	border: none;
+	background-color: #489901;
+	color: #ffffff;
+	font-size: 18px;
+	padding: 7px;
+	min-height: 48px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	border-radius: 5px;
+	transition: background-color 0.3s ease 0s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: darken(#489901, 5%) ;
+	}
+}
+
+body {
+
+    @include min768 {
+        background-image: url(../../../img/backgrounds-16.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }

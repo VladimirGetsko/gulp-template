@@ -8,17 +8,30 @@
     <title>Главная</title>
 </head>
 <body>
+    <div class="wrapper">
 
-    @@include('chunk/header.html')
+        @@include('chunk/header.html')
 
-    <h1 class="title _icon-share">Главная</h1>
+        <main class="page">
+            <section class="paig__main main">
+                <div class="main__container">
+                    <h1 class="title _icon-share">Главная</h1>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odit exercitationem a doloremque aliquam nam ut incidunt tempore minus dolorem delectus ducimus consequatur itaque, id animi esse, accusamus tenetur, quo laborum tempora modi natus beatae possimus adipisci. Voluptatem magnam labore eaque, voluptatum, quaerat aperiam modi tenetur nobis sunt laudantium quo?</p>
-    <div class="news">
-        @@loop("chunk/news-item.html", "../../data/news.json")
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odit exercitationem a doloremque aliquam nam ut incidunt tempore minus dolorem delectus ducimus consequatur itaque, id animi esse, accusamus tenetur, quo laborum tempora modi natus beatae possimus adipisci. Voluptatem magnam labore eaque, voluptatum, quaerat aperiam modi tenetur nobis sunt laudantium quo?</p>
+                    <div class="news">
+                        @@loop("chunk/news-item.html", "../../data/news.json")
+                    </div>
+
+                    <a class="phone__link" style="color:blue;" href="#">Заказать обратный звонок</a>
+                </div>
+            </section>
+        </main>
+
+        @@include('chunk/footer.html')
+
+        @@include('chunk/popup.html')
+
     </div>
-
-    @@include('chunk/footer.html')
 
     <script src="js/main.js"></script>
 </body>

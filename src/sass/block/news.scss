@@ -3,8 +3,4 @@
     padding: 0;
     display: flex;
     justify-content: space-between;
-
-    @include ph {
-        display: block;
-    }
 }
