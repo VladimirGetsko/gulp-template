@@ -25,10 +25,25 @@ const modals = () => {
 
         close.addEventListener('click', () => {
             windows.forEach(item => {
-                item.style.display = 'none';
+                item.classList.remove('fadeIn')
+                item.classList.add('fadeOut')
+    
+                setTimeout(() => {
+                    item.classList.remove('fadeOut')
+                    item.style.display = "none";
+                }, 2000)
+
             });
 
-            modal.style.display = "none";
+            modal.classList.remove('fadeIn')
+            modal.classList.add('fadeOut')
+
+            setTimeout(() => {
+                modal.classList.remove('fadeOut')
+                modal.style.display = "none";
+            }, 800)
+
+
             document.body.style.overflow = "";
             document.body.style.marginRight = `0px`;
         });
@@ -36,10 +51,24 @@ const modals = () => {
         modal.addEventListener('click', (e) => {
             if (e.target === modal && closeClickOverlay) {
                 windows.forEach(item => {
-                    item.style.display = 'none';
+                    item.classList.remove('fadeIn')
+                    item.classList.add('fadeOut')
+        
+                    setTimeout(() => {
+                        item.classList.remove('fadeOut')
+                        item.style.display = "none";
+                    }, 2000)
                 });
 
-                modal.style.display = "none";
+                
+                modal.classList.remove('fadeIn')
+                modal.classList.add('fadeOut')
+    
+                setTimeout(() => {
+                    modal.classList.remove('fadeOut')
+                    modal.style.display = "none";
+                }, 800)
+
                 document.body.style.overflow = ""; 
                 document.body.style.marginRight = `0px`;
             }

@@ -96,3 +96,18 @@
         opacity: 1;
     }
 }
+
+.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
