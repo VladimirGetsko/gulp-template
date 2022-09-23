@@ -21,21 +21,31 @@
         transition: background-color 0.3s ease 0s;
         cursor: pointer;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: rgba(#ffffff, 0.15);
         }
+    }
+
+    &__wrap {
+        width: 100%;
     }
 
     &__body {
         position: fixed;
         text-align: center;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 25rem;
-        width: 100%;
+        margin-top: 20px;
+        width: 95%;
         background-color: #ffffff;
         padding: rem(40px);
+
+        @include min576 {
+            max-width: 25rem;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 }
 

@@ -25,21 +25,21 @@ const modals = () => {
 
         close.addEventListener('click', () => {
             windows.forEach(item => {
-                item.classList.remove('fadeIn')
-                item.classList.add('fadeOut')
+                item.classList.remove('fadeIn');
+                item.classList.add('fadeOut');
     
                 setTimeout(() => {
                     item.classList.remove('fadeOut')
                     item.style.display = "none";
-                }, 2000)
+                }, 800)
 
             });
 
-            modal.classList.remove('fadeIn')
-            modal.classList.add('fadeOut')
+            modal.classList.remove('fadeIn');
+            modal.classList.add('fadeOut');
 
             setTimeout(() => {
-                modal.classList.remove('fadeOut')
+                modal.classList.remove('fadeOut');
                 modal.style.display = "none";
             }, 800)
 
@@ -57,7 +57,7 @@ const modals = () => {
                     setTimeout(() => {
                         item.classList.remove('fadeOut')
                         item.style.display = "none";
-                    }, 2000)
+                    }, 800)
                 });
 
                 

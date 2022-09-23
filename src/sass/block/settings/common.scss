@@ -40,7 +40,8 @@ a {
 [class*="__container"] {
     max-width: $maxWidthContainer;
     margin: 0 auto;
-    padding: 0px 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .button {
@@ -58,7 +59,8 @@ a {
 	transition: background-color 0.3s ease 0s;
 	cursor: pointer;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		background-color: darken(#489901, 5%) ;
 	}
 }
