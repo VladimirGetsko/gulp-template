@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+  @@include('chunk/header.html')
+
+  <h1 class="title">Головна</h1>
+  <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, deleniti natus. Repudiandae tenetur quos labore impedit ex a voluptates hic veniam ab molestiae quidem quaerat, nisi fuga, error debitis dolorum?</p>
+  <img src="img/backgrounds-16.jpg" alt="#">
+  @@loop('chunk/news-items.html', "../../data/news.json")
+
+  @@include('chunk/footer.html')
+
+  <script src="js/main.js"></script>
+</body>
+</html>

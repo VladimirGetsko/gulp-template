@@ -1,0 +1,31 @@
+$base-font-size: 18px;
+
+@mixin max991 {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(239, 239, 239);
+  font-family: Arial;
+  font-size: $base-font-size;
+  line-height: 1.5;
+  background-image: url('../img/max-test-image.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include max991 {
+    font-size: 26px;
+    background-color: rgb(174, 172, 172);
+  }
+}
+
+@import "block/*.scss";
