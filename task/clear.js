@@ -1,11 +1,10 @@
 const del = require('del');
 
-// Конфигурация
-const path = require('../config/path.js');
+// Конфігурація
+const path = require("../config/path.js")
 
-// Удаление директорий
+// Видалення директорій
 const clear = () => {
-    return del(path.root);
-};
-
+  return del(path.root);
+}
 module.exports = clear;

@@ -1,0 +1,9 @@
+.text {
+  color: blue;
+  display: inline-flex;
+  font-size: 24px;
+
+  @include max991 {
+    color: green;
+  }
+}

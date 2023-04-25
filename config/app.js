@@ -2,29 +2,22 @@ const isProd = process.argv.includes("--production");
 const isDev = !isProd;
 
 module.exports = {
-    isProd: isProd,
-    isDev: isDev,
+  isProd: isProd,
+  isDev: isDev,
 
-    htmlmin: {
-        collapseWhitespace: isProd
-    },
-    
-    pug: {
-        pretty: isDev, // для сжатия файла передать false
-        data: {
-            news: require('../data/news.json')
-        }
-    },
+  htmlmin: {
+    collapseWhitespace: isProd
+  },
 
-    webpack: {
-        mode: isProd ? "production" : "development"
-    },
+  webpack: {
+    mode: isProd ? "development" : "development"
+  },
 
-    imagemin: {
-        verbose: true
-    },
+  imagemin: {
+    verbose: true
+  },
 
-    fonter: {
-        formats: ["ttf", "woff", "eot", "svg"]
-    }
-};
+  fonter: {
+    formats: ["ttf", "woff", "eot", "svg"]
+  }
+}

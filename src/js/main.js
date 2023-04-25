@@ -1,5 +1,4 @@
-import modals from './modules/modals';
+const sum = require('./module/sum.js');
 
-window.addEventListener('DOMContentLoaded', () => {
-    modals();
-});
+console.log(sum(2, 14));
+console.log(sum(14, 14));

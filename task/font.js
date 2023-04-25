@@ -1,31 +1,32 @@
 const { src, dest } = require('gulp');
 
-// Конфигурация
-const path = require('../config/path.js');
-const app = require('../config/app.js');
+// Конфігурація
+const path = require("../config/path.js");
+const app = require("../config/app.js");
 
-// Плагины
+
+// Плагіни
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const newer = require('gulp-newer');
-const fonterUnx = require('gulp-fonter-unx');
+const fonter = require('gulp-fonter-unx');
 const ttf2woff2 = require('gulp-ttf2woff2');
 
+// Обробка Font
 
-// Обработка Font
 const font = () => {
-    return src(path.font.src)
-    .pipe(plumber({
-        errorHandler: notify.onError(error => ({
+  return src(path.font.src)
+        .pipe(plumber({
+          errorHandler: notify.onError(error => ({
             title: "Font",
             message: error.message
+          }))
         }))
-    }))
-    .pipe(newer(path.font.dest))
-    .pipe(fonterUnx(app.fonter))
-    .pipe(dest(path.font.dest))
-    .pipe(ttf2woff2())
-    .pipe(dest(path.font.dest));
-};
+        .pipe(newer(path.font.dest))
+        .pipe(fonter(app.fonter))
+        .pipe(dest(path.font.dest))
+        .pipe(ttf2woff2())
+        .pipe(dest(path.font.dest));
+}
 
 module.exports = font;

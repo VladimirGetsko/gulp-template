@@ -1,38 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.min.css">
-    <title>Главная</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
-    <div class="wrapper">
 
-        @@include('chunk/header.html')
+  @@include('chunk/header.html')
 
-        <main class="page">
-            <section class="paig__main main">
-                <div class="main__container">
-                    <h1 class="title _icon-share">Главная</h1>
+  <h1 class="title">Головна</h1>
+  <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, deleniti natus. Repudiandae tenetur quos labore impedit ex a voluptates hic veniam ab molestiae quidem quaerat, nisi fuga, error debitis dolorum?</p>
+  <img src="img/backgrounds-16.jpg" alt="#">
+  @@loop('chunk/news-items.html', "../../data/news.json")
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odit exercitationem a doloremque aliquam nam ut incidunt tempore minus dolorem delectus ducimus consequatur itaque, id animi esse, accusamus tenetur, quo laborum tempora modi natus beatae possimus adipisci. Voluptatem magnam labore eaque, voluptatum, quaerat aperiam modi tenetur nobis sunt laudantium quo?</p>
-                    <div class="news">
-                        @@loop("chunk/news-item.html", "../../data/news.json")
-                    </div>
+  @@include('chunk/footer.html')
 
-                    <a class="phone__link" style="color:blue;" href="#">Заказать обратный звонок</a>
-                </div>
-            </section>
-        </main>
-
-        @@include('chunk/footer.html')
-
-        @@include('chunk/popup.html')
-
-    </div>
-
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,48 +1,42 @@
-const pathSrc = "./src";
+const partSrc = "./src";
 const pathDest = "./public";
 
 module.exports = {
-    root: pathDest,
+  root: pathDest,
 
-    html: {
-        src: pathSrc + "/html/*.html",
-        watch: pathSrc + "/html/**/*.html",
-        dest: pathDest
-    },
+  html: {
+    src: partSrc + "/html/*.html",
+    watch: partSrc + "/html/**/*.html",
+    dest: pathDest
+  },
 
-    pug: {
-        src: pathSrc + "/pug/*.pug",
-        watch: pathSrc + "/pug/**/*.pug",
-        dest: pathDest
-    },
+  css: {
+    src: partSrc + "/css/*.css",
+    watch: partSrc + "/css/**/*.css",
+    dest: pathDest + "/css"
+  },
 
-    css: {
-        src: pathSrc + "/css/*.css",
-        watch: pathSrc + "/css/**/*.css",
-        dest: pathDest + "/css"
-    },
+  scss: {
+    src: partSrc + "/sass/*.{sass,scss}",
+    watch: partSrc + "/sass/**/*.{sass,scss}",
+    dest: pathDest + "/css"
+  },
 
-    scss: {
-        src: pathSrc + "/sass/*.{sass,scss}",
-        watch: pathSrc + "/sass/**/*.{sass,scss}",
-        dest: pathDest + "/css"
-    },
+  js: {
+    src: partSrc + "/js/*.js",
+    watch: partSrc + "/js/**/*.js",
+    dest: pathDest + "/js"
+  },
 
-    js: {
-        src: pathSrc + "/js/*.js",
-        watch: pathSrc + "/js/**/*.js",
-        dest: pathDest + "/js"
-    },
+  img: {
+    src: partSrc + "/img/*.{png,jpg,jpeg,gif,svg}",
+    watch: partSrc + "/img/**/*.{png,jpg,jpeg,gif,svg}",
+    dest: pathDest + "/img"
+  },
 
-    img: {
-        src: pathSrc + "/img/*.{png,jpg,jpeg,gif,svg,ico}",
-        watch: pathSrc + "/img/**/*.{png,jpg,jpeg,gif,svg,ico}",
-        dest: pathDest + "/img"
-    },
-
-    font: {
-        src: pathSrc + "/font/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}",
-        watch: pathSrc + "/font/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}",
-        dest: pathDest + "/font"
-    },
-};
+  font: {
+    src: partSrc + "/font/*.{eot,ttf,otf,woff,woff2,svg}",
+    watch: partSrc + "/font/**/*.{eot,ttf,otf,woff,woff2,svg}",
+    dest: pathDest + "/font"
+  },
+}
